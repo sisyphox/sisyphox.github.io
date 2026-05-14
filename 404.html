@@ -3,14 +3,16 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>404 — 页面未找到</title>
+        <title>404 — Sisyphox</title>
         <link rel="stylesheet" href="/css/style.css" />
     </head>
     <body>
         <header class="site-header">
-            <div class="site-title">
-                <a href="/">Sisyphox</a>
-            </div>
+            <div class="site-title"><a href="/">Sisyphox</a></div>
+            <nav class="site-nav">
+                <a href="/">博客</a>
+                <a href="/?page=about">关于</a>
+            </nav>
         </header>
         <div class="container">
             <main>
@@ -32,11 +34,10 @@
             </main>
         </div>
         <footer class="site-footer">
-            <p>&copy; <span id="currentYear"></span> Sisyphox</p>
+            <p>&copy; <span id="y"></span> Sisyphox</p>
         </footer>
         <script>
-            document.getElementById("currentYear").textContent =
-                new Date().getFullYear();
+            document.getElementById("y").textContent = new Date().getFullYear();
         </script>
     </body>
 </html>

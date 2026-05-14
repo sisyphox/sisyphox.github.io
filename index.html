@@ -8,14 +8,8 @@
             content="Sisyphox 的博客 — 记录思考, 分享所得。"
         />
         <title>Sisyphox</title>
-
-        <!-- Styles -->
         <link rel="stylesheet" href="/css/style.css" />
-
-        <!-- marked.js — Markdown 渲染 -->
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-        <!-- 博客逻辑 -->
         <script src="/js/blog.js"></script>
     </head>
     <body>
@@ -58,34 +52,9 @@
             </p>
         </footer>
 
-        <!-- ========== Theme Toggle Logic ========== -->
         <script>
-            (function () {
-                // 年份
-                document.getElementById("currentYear").textContent =
-                    new Date().getFullYear();
-
-                const toggle = document.getElementById("themeToggle");
-                const STORAGE_KEY = "sisyphox-theme";
-
-                // 从 localStorage 读取偏好
-                const saved = localStorage.getItem(STORAGE_KEY);
-                if (saved === "dark") {
-                    document.documentElement.classList.add("dark-mode");
-                } else if (saved === "light") {
-                    document.documentElement.classList.remove("dark-mode");
-                }
-                // 没有保存则跟随系统 (CSS media query 自动处理)
-
-                toggle.addEventListener("click", () => {
-                    const isDark =
-                        document.documentElement.classList.toggle("dark-mode");
-                    localStorage.setItem(
-                        STORAGE_KEY,
-                        isDark ? "dark" : "light",
-                    );
-                });
-            })();
+            document.getElementById("currentYear").textContent =
+                new Date().getFullYear();
         </script>
     </body>
 </html>

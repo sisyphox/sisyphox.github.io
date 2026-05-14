@@ -2,8 +2,73 @@
     {
         "title": "你好，世界！",
         "slug": "hello-world",
-        "date": "2025-01-15",
-        "tags": ["随笔", "博客"],
+        "date": "2026-05-10",
+        "dir": "misc",
+        "category": "随笔",
+        "tags": ["博客"],
         "excerpt": "欢迎来到我的博客。在这个信息爆炸的时代，写作是最好的思考方式。"
+    },
+    {
+        "title": "并查集 (DSU)",
+        "slug": "dsu",
+        "date": "2026-05-11",
+        "dir": "algorithm",
+        "category": "数据结构",
+        "tags": ["并查集", "图论", "基础"],
+        "excerpt": "并查集（Disjoint Set Union）是一种用于管理元素分组关系的数据结构，支持近乎常数时间的查找和合并操作。"
+    },
+    {
+        "title": "线段树 (Segment Tree)",
+        "slug": "segt",
+        "date": "2026-05-11",
+        "dir": "algorithm",
+        "category": "数据结构",
+        "tags": ["线段树", "区间查询", "分治"],
+        "excerpt": "线段树是最常用的区间维护数据结构之一，支持 O(log n) 的单点修改和区间查询。"
+    },
+    {
+        "title": "字典树 (Trie)",
+        "slug": "trie",
+        "date": "2026-05-12",
+        "dir": "algorithm",
+        "category": "数据结构",
+        "tags": ["字典树", "字符串", "前缀"],
+        "excerpt": "Trie（前缀树）利用字符串的公共前缀高效存储和检索字符串集合，是字符串算法的基石。"
+    },
+    {
+        "title": "稀疏表 (Sparse Table)",
+        "slug": "st",
+        "date": "2026-05-12",
+        "dir": "algorithm",
+        "category": "数据结构",
+        "tags": ["ST表", "RMQ", "倍增"],
+        "excerpt": "ST 表能在 O(1) 时间内回答静态数组的区间最值查询，是处理 RMQ 问题的利器。"
+    },
+    {
+        "title": "李超线段树 (Li Chao Segment Tree)",
+        "slug": "lichao-tree",
+        "date": "2026-05-13",
+        "dir": "algorithm",
+        "category": "数据结构",
+        "tags": ["李超树", "凸包技巧", "DP优化"],
+        "excerpt": "李超线段树用于维护直线集合，支持 O(log C) 插入直线和查询某点最值，是斜率优化 DP 的核心工具。"
+    },
+    {
+        "title": "线性基 (Linear Basis)",
+        "slug": "linear-basis",
+        "date": "2026-05-13",
+        "dir": "algorithm",
+        "category": "数据结构",
+        "tags": ["线性基", "异或", "数学"],
+        "excerpt": "线性基是处理 XOR 空间问题的强大工具，能高效解决最大异或子集、异或和计数等问题。"
+    },
+    {
+        "title": "可持久化线段树 (主席树)",
+        "slug": "persistent-segt",
+        "date": "2026-05-14",
+        "dir": "algorithm",
+        "category": "数据结构",
+        "tags": ["主席树", "可持久化", "区间第K小"],
+        "excerpt": "可持久化线段树通过共享节点实现历史版本访问，是解决静态区间第 K 小的经典数据结构。"
     }
 ]
