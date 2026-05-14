@@ -1,8 +1,91 @@
-<!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"><title>我的博客</title></head>
-<body>
-  <h1>你好，世界！</h1>
-  <p>这是我的 GitHub Pages 博客。</p>
-</body>
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Sisyphox 的博客 — 记录思考, 分享所得。"
+        />
+        <title>Sisyphox</title>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="/css/style.css" />
+
+        <!-- marked.js — Markdown 渲染 -->
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+        <!-- 博客逻辑 -->
+        <script src="/js/blog.js"></script>
+    </head>
+    <body>
+        <!-- ========== Header ========== -->
+        <header class="site-header">
+            <div class="site-title">
+                <a href="/">Sisyphox</a>
+            </div>
+            <nav class="site-nav">
+                <a href="/">博客</a>
+                <a href="/?page=about">关于</a>
+            </nav>
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="切换暗色模式"
+                title="切换暗色模式"
+            >
+                🌓
+            </button>
+        </header>
+
+        <!-- ========== Main Content ========== -->
+        <div class="container">
+            <main>
+                <!-- 由 blog.js 动态填充 -->
+            </main>
+        </div>
+
+        <!-- ========== Footer ========== -->
+        <footer class="site-footer">
+            <p>
+                &copy; <span id="currentYear"></span> Sisyphox · Powered by
+                <a
+                    href="https://pages.github.com"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub Pages</a
+                >
+            </p>
+        </footer>
+
+        <!-- ========== Theme Toggle Logic ========== -->
+        <script>
+            (function () {
+                // 年份
+                document.getElementById("currentYear").textContent =
+                    new Date().getFullYear();
+
+                const toggle = document.getElementById("themeToggle");
+                const STORAGE_KEY = "sisyphox-theme";
+
+                // 从 localStorage 读取偏好
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved === "dark") {
+                    document.documentElement.classList.add("dark-mode");
+                } else if (saved === "light") {
+                    document.documentElement.classList.remove("dark-mode");
+                }
+                // 没有保存则跟随系统 (CSS media query 自动处理)
+
+                toggle.addEventListener("click", () => {
+                    const isDark =
+                        document.documentElement.classList.toggle("dark-mode");
+                    localStorage.setItem(
+                        STORAGE_KEY,
+                        isDark ? "dark" : "light",
+                    );
+                });
+            })();
+        </script>
+    </body>
 </html>

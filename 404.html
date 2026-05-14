@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404 — 页面未找到</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="site-title">
+                <a href="/">Sisyphox</a>
+            </div>
+        </header>
+        <div class="container">
+            <main>
+                <div class="empty-state" style="padding-top: 6rem">
+                    <div class="icon">🗿</div>
+                    <h1
+                        style="
+                            font-family: var(--font-serif);
+                            margin-bottom: 0.5rem;
+                        "
+                    >
+                        404
+                    </h1>
+                    <p>这个页面不存在，或者已被移走。</p>
+                    <a href="/" class="back-link" style="margin-top: 1.5rem"
+                        >← 返回首页</a
+                    >
+                </div>
+            </main>
+        </div>
+        <footer class="site-footer">
+            <p>&copy; <span id="currentYear"></span> Sisyphox</p>
+        </footer>
+        <script>
+            document.getElementById("currentYear").textContent =
+                new Date().getFullYear();
+        </script>
+    </body>
+</html>
